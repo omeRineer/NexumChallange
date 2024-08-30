@@ -9,7 +9,7 @@ namespace NexumChallange.Entities
     public class Traveler
     {
         public Guid Id { get; set; }
-        public string Name { get; set; }
+        public string Tag { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
         public char Direction { get; set; }

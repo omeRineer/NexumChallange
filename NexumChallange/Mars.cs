@@ -30,7 +30,7 @@ namespace NexumChallange
             var newTraveler = new Traveler
             {
                 Id = Guid.NewGuid(),
-                Name = txtName.Text,
+                Tag = txtTag.Text,
                 X = int.Parse(locationVariables[0]),
                 Y = int.Parse(locationVariables[1]),
                 Direction = char.Parse(locationVariables[2]),
