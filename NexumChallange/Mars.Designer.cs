@@ -40,7 +40,25 @@
             label1 = new Label();
             lstTravelers = new ListBox();
             btnSend = new Button();
+            groupBox2 = new GroupBox();
+            lstResultTravelers = new ListBox();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            lblXResult = new Label();
+            lblYResult = new Label();
+            lblDirectionResult = new Label();
+            groupBox3 = new GroupBox();
+            lblDirection = new Label();
+            lblY = new Label();
+            lblX = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            label13 = new Label();
+            btnClear = new Button();
             groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -148,16 +166,182 @@
             // 
             btnSend.Location = new Point(12, 479);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(577, 40);
+            btnSend.Size = new Size(283, 40);
             btnSend.TabIndex = 7;
             btnSend.Text = "Gönder";
             btnSend.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(lblDirectionResult);
+            groupBox2.Controls.Add(lblYResult);
+            groupBox2.Controls.Add(lblXResult);
+            groupBox2.Controls.Add(label7);
+            groupBox2.Controls.Add(label6);
+            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(lstResultTravelers);
+            groupBox2.Location = new Point(12, 536);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(577, 253);
+            groupBox2.TabIndex = 8;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Sonuç";
+            // 
+            // lstResultTravelers
+            // 
+            lstResultTravelers.FormattingEnabled = true;
+            lstResultTravelers.ItemHeight = 23;
+            lstResultTravelers.Location = new Point(6, 46);
+            lstResultTravelers.Name = "lstResultTravelers";
+            lstResultTravelers.Size = new Size(208, 188);
+            lstResultTravelers.TabIndex = 0;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(273, 63);
+            label5.Name = "label5";
+            label5.Size = new Size(43, 23);
+            label5.TabIndex = 1;
+            label5.Text = "X :";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(273, 114);
+            label6.Name = "label6";
+            label6.Size = new Size(43, 23);
+            label6.TabIndex = 2;
+            label6.Text = "Y :";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(251, 164);
+            label7.Name = "label7";
+            label7.Size = new Size(65, 23);
+            label7.TabIndex = 3;
+            label7.Text = "Yön :";
+            // 
+            // lblXResult
+            // 
+            lblXResult.AutoSize = true;
+            lblXResult.ForeColor = Color.FromArgb(255, 128, 0);
+            lblXResult.Location = new Point(322, 63);
+            lblXResult.Name = "lblXResult";
+            lblXResult.Size = new Size(43, 23);
+            lblXResult.TabIndex = 4;
+            lblXResult.Text = "N/A";
+            // 
+            // lblYResult
+            // 
+            lblYResult.AutoSize = true;
+            lblYResult.ForeColor = Color.FromArgb(255, 128, 0);
+            lblYResult.Location = new Point(322, 114);
+            lblYResult.Name = "lblYResult";
+            lblYResult.Size = new Size(43, 23);
+            lblYResult.TabIndex = 5;
+            lblYResult.Text = "N/A";
+            // 
+            // lblDirectionResult
+            // 
+            lblDirectionResult.AutoSize = true;
+            lblDirectionResult.ForeColor = Color.FromArgb(255, 128, 0);
+            lblDirectionResult.Location = new Point(322, 164);
+            lblDirectionResult.Name = "lblDirectionResult";
+            lblDirectionResult.Size = new Size(43, 23);
+            lblDirectionResult.TabIndex = 6;
+            lblDirectionResult.Text = "N/A";
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(lblDirection);
+            groupBox3.Controls.Add(lblY);
+            groupBox3.Controls.Add(lblX);
+            groupBox3.Controls.Add(label11);
+            groupBox3.Controls.Add(label12);
+            groupBox3.Controls.Add(label13);
+            groupBox3.Location = new Point(301, 246);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(288, 224);
+            groupBox3.TabIndex = 9;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Detay";
+            // 
+            // lblDirection
+            // 
+            lblDirection.AutoSize = true;
+            lblDirection.ForeColor = Color.FromArgb(255, 128, 0);
+            lblDirection.Location = new Point(82, 160);
+            lblDirection.Name = "lblDirection";
+            lblDirection.Size = new Size(43, 23);
+            lblDirection.TabIndex = 12;
+            lblDirection.Text = "N/A";
+            // 
+            // lblY
+            // 
+            lblY.AutoSize = true;
+            lblY.ForeColor = Color.FromArgb(255, 128, 0);
+            lblY.Location = new Point(82, 110);
+            lblY.Name = "lblY";
+            lblY.Size = new Size(43, 23);
+            lblY.TabIndex = 11;
+            lblY.Text = "N/A";
+            // 
+            // lblX
+            // 
+            lblX.AutoSize = true;
+            lblX.ForeColor = Color.FromArgb(255, 128, 0);
+            lblX.Location = new Point(82, 59);
+            lblX.Name = "lblX";
+            lblX.Size = new Size(43, 23);
+            lblX.TabIndex = 10;
+            lblX.Text = "N/A";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(11, 160);
+            label11.Name = "label11";
+            label11.Size = new Size(65, 23);
+            label11.TabIndex = 9;
+            label11.Text = "Yön :";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(33, 110);
+            label12.Name = "label12";
+            label12.Size = new Size(43, 23);
+            label12.TabIndex = 8;
+            label12.Text = "Y :";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(33, 59);
+            label13.Name = "label13";
+            label13.Size = new Size(43, 23);
+            label13.TabIndex = 7;
+            label13.Text = "X :";
+            // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(301, 479);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(288, 40);
+            btnClear.TabIndex = 10;
+            btnClear.Text = "Temizle";
+            btnClear.UseVisualStyleBackColor = true;
             // 
             // Mars
             // 
             AutoScaleDimensions = new SizeF(11F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(601, 531);
+            ClientSize = new Size(601, 801);
+            Controls.Add(btnClear);
+            Controls.Add(groupBox3);
+            Controls.Add(groupBox2);
             Controls.Add(btnSend);
             Controls.Add(lstTravelers);
             Controls.Add(label1);
@@ -171,6 +355,10 @@
             Load += Menu_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -189,5 +377,21 @@
         private Label label1;
         private ListBox lstTravelers;
         private Button btnSend;
+        private GroupBox groupBox2;
+        private Label lblDirectionResult;
+        private Label lblYResult;
+        private Label lblXResult;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private ListBox lstResultTravelers;
+        private GroupBox groupBox3;
+        private Label lblDirection;
+        private Label lblY;
+        private Label lblX;
+        private Label label11;
+        private Label label12;
+        private Label label13;
+        private Button btnClear;
     }
 }
