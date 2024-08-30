@@ -1,5 +1,5 @@
 {
   "Options": {
-    "InfoList": [ "L", "R", "M" ]
+    "ConfirmVariables": [ "L", "R", "M" ]
   }
 }
