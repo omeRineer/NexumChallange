@@ -41,6 +41,8 @@
             lstTravelers = new ListBox();
             btnSend = new Button();
             groupBox2 = new GroupBox();
+            lblTagResult = new Label();
+            label8 = new Label();
             lblDirectionResult = new Label();
             lblYResult = new Label();
             lblXResult = new Label();
@@ -49,17 +51,14 @@
             label5 = new Label();
             lstResultTravelers = new ListBox();
             groupBox3 = new GroupBox();
+            lblTag = new Label();
+            label10 = new Label();
             lblDirection = new Label();
             lblY = new Label();
             lblX = new Label();
             label11 = new Label();
             label12 = new Label();
             label13 = new Label();
-            btnClear = new Button();
-            label8 = new Label();
-            lblTagResult = new Label();
-            lblTag = new Label();
-            label10 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -165,15 +164,17 @@
             lstTravelers.Name = "lstTravelers";
             lstTravelers.Size = new Size(288, 211);
             lstTravelers.TabIndex = 3;
+            lstTravelers.SelectedIndexChanged += lstTravelers_SelectedIndexChanged;
             // 
             // btnSend
             // 
             btnSend.Location = new Point(12, 479);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(283, 40);
+            btnSend.Size = new Size(577, 40);
             btnSend.TabIndex = 7;
             btnSend.Text = "Gönder";
             btnSend.UseVisualStyleBackColor = true;
+            btnSend.Click += btnSend_Click;
             // 
             // groupBox2
             // 
@@ -192,6 +193,25 @@
             groupBox2.TabIndex = 8;
             groupBox2.TabStop = false;
             groupBox2.Text = "Sonuç";
+            // 
+            // lblTagResult
+            // 
+            lblTagResult.AutoSize = true;
+            lblTagResult.ForeColor = Color.FromArgb(255, 128, 0);
+            lblTagResult.Location = new Point(319, 46);
+            lblTagResult.Name = "lblTagResult";
+            lblTagResult.Size = new Size(43, 23);
+            lblTagResult.TabIndex = 8;
+            lblTagResult.Text = "N/A";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(248, 46);
+            label8.Name = "label8";
+            label8.Size = new Size(65, 23);
+            label8.TabIndex = 7;
+            label8.Text = "Tag :";
             // 
             // lblDirectionResult
             // 
@@ -258,6 +278,7 @@
             lstResultTravelers.Name = "lstResultTravelers";
             lstResultTravelers.Size = new Size(208, 188);
             lstResultTravelers.TabIndex = 0;
+            lstResultTravelers.SelectedIndexChanged += lstResultTravelers_SelectedIndexChanged;
             // 
             // groupBox3
             // 
@@ -275,6 +296,25 @@
             groupBox3.TabIndex = 9;
             groupBox3.TabStop = false;
             groupBox3.Text = "Detay";
+            // 
+            // lblTag
+            // 
+            lblTag.AutoSize = true;
+            lblTag.ForeColor = Color.FromArgb(255, 128, 0);
+            lblTag.Location = new Point(91, 45);
+            lblTag.Name = "lblTag";
+            lblTag.Size = new Size(43, 23);
+            lblTag.TabIndex = 14;
+            lblTag.Text = "N/A";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(20, 45);
+            label10.Name = "label10";
+            label10.Size = new Size(65, 23);
+            label10.TabIndex = 13;
+            label10.Text = "Tag :";
             // 
             // lblDirection
             // 
@@ -333,59 +373,11 @@
             label13.TabIndex = 7;
             label13.Text = "X :";
             // 
-            // btnClear
-            // 
-            btnClear.Location = new Point(301, 479);
-            btnClear.Name = "btnClear";
-            btnClear.Size = new Size(288, 40);
-            btnClear.TabIndex = 10;
-            btnClear.Text = "Temizle";
-            btnClear.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(248, 46);
-            label8.Name = "label8";
-            label8.Size = new Size(65, 23);
-            label8.TabIndex = 7;
-            label8.Text = "Tag :";
-            // 
-            // lblTagResult
-            // 
-            lblTagResult.AutoSize = true;
-            lblTagResult.ForeColor = Color.FromArgb(255, 128, 0);
-            lblTagResult.Location = new Point(319, 46);
-            lblTagResult.Name = "lblTagResult";
-            lblTagResult.Size = new Size(43, 23);
-            lblTagResult.TabIndex = 8;
-            lblTagResult.Text = "N/A";
-            // 
-            // lblTag
-            // 
-            lblTag.AutoSize = true;
-            lblTag.ForeColor = Color.FromArgb(255, 128, 0);
-            lblTag.Location = new Point(91, 45);
-            lblTag.Name = "lblTag";
-            lblTag.Size = new Size(43, 23);
-            lblTag.TabIndex = 14;
-            lblTag.Text = "N/A";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(20, 45);
-            label10.Name = "label10";
-            label10.Size = new Size(65, 23);
-            label10.TabIndex = 13;
-            label10.Text = "Tag :";
-            // 
             // Mars
             // 
             AutoScaleDimensions = new SizeF(11F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(601, 801);
-            Controls.Add(btnClear);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(btnSend);
@@ -438,7 +430,6 @@
         private Label label11;
         private Label label12;
         private Label label13;
-        private Button btnClear;
         private Label lblTagResult;
         private Label label8;
         private Label lblTag;

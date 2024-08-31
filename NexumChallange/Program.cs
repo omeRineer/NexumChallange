@@ -8,10 +8,18 @@ namespace NexumChallange
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(ExceptionHandle);
+
             ApplicationConfiguration.Initialize();
             Application.Run(new Mars());
+
+        }
+
+        static void ExceptionHandle(object sender, UnhandledExceptionEventArgs args)
+        {
+            Exception e = (Exception)args.ExceptionObject;
+
+            MessageBox.Show(e.Message, "HATA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
